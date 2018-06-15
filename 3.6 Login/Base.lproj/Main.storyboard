@@ -37,18 +37,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
-                                    <segue destination="C3M-J2-J5u" kind="show" id="VqO-IE-odm"/>
+                                    <segue destination="C3M-J2-J5u" kind="show" id="Gpq-uZ-G9l"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdX-v3-uSg">
                                 <rect key="frame" x="16" y="398" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Forgot User Name?"/>
+                                <connections>
+                                    <action selector="forgotUserNameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2yc-8o-YgX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDh-u0-NQL">
                                 <rect key="frame" x="181" y="398" width="123" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Forgot Password?"/>
+                                <connections>
+                                    <action selector="forgotPasswordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hgQ-pv-Adh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,7 +62,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Super Duper App" largeTitleDisplayMode="always" id="r9c-0N-gTb"/>
                     <connections>
+                        <outlet property="forgotPasswordButton" destination="sDh-u0-NQL" id="KYE-RA-P0f"/>
+                        <outlet property="forgotUserNameButton" destination="VdX-v3-uSg" id="pBP-Ky-G19"/>
                         <outlet property="userName" destination="Xkz-jg-kp9" id="Wh6-AO-CYj"/>
+                        <segue destination="C3M-J2-J5u" kind="show" identifier="forgotUserNameOrPassword" id="0cY-fI-PSc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -97,4 +106,7 @@
             <point key="canvasLocation" x="215.625" y="802.81690140845069"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0cY-fI-PSc"/>
+    </inferredMetricsTieBreakers>
 </document>
